@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Space_Grotesk: "'Space Grotesk', sans-serif"
+      }
+    },
   },
   plugins: [require("daisyui")],
 }
