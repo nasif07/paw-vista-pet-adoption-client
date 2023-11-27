@@ -1,0 +1,19 @@
+[
+    {
+      "petCategory": "Dogs",
+      "image": "https://i.ibb.co/M9hR1g4/pug-dog-isolated-white-background.jpg"
+    },
+    {
+      "petCategory": "Cats",
+      "image": "https://i.ibb.co/hYcFqSM/red-white-cat-i-white-studio.jpg"
+    },
+    {
+      "petCategory": "Rabbits",
+      "image": "https://i.ibb.co/LQxsPr4/rabbit-274039655.jpg"
+    },
+    {
+      "petCategory": "Horses",
+      "image": "https://i.ibb.co/hcxL682/360-F-38247523-H8-TAReu0f-VQVs-JNN4oz-J8-KDifq-FF8-VUG.jpg"
+    }
+  ]
+  
