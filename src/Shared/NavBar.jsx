@@ -20,7 +20,7 @@ const NavBar = () => {
             </NavLink>
         </li>
         <li>
-            <NavLink to="/signup" className={({ isActive, isPending }) =>
+            <NavLink to="/login" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "text-[#FF4880]" : ""}>
                     Login
             </NavLink>
@@ -28,7 +28,7 @@ const NavBar = () => {
     </>
     return (
             <div className="font-Space_Grotesk">
-                <div className="navbar text-white fixed z-10 bg-opacity-0 lg:px-24">
+                <div className="navbar text-white fixed z-10 bg-black bg-opacity-20 lg:px-24">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">

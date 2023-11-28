@@ -10,7 +10,7 @@ const AboutUs = () => {
             <Title heading={"About Us"} subHeading={"Connecting Hearts, One Paw at a Time"}></Title>
             <div>
                 <div className="hero p-0">
-                    <div className="hero-content p-0 flex-col gap-20 lg:flex-row">
+                    <div className="hero-content max-w-full p-0 flex-col gap-20 lg:flex-row">
                         <img src={aboutUsImg} className="lg:w-full md:w-[550px] rounded-full shadow-2xl" />
                         <div className="space-y-6 w-full">
                             <h1 className="text-5xl pb-4 font-bold">WE ARE BEST FOR YOUR PET CARE</h1>
