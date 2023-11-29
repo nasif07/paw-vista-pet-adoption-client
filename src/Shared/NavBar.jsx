@@ -1,6 +1,14 @@
+import { useContext } from "react";
 import { IoPawSharp } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 const NavBar = () => {
+    const {user, logOut} = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut();
+    }
+
     const navLinks = <>
         <li>
             <NavLink to="/" className={({ isActive, isPending }) =>
@@ -9,7 +17,7 @@ const NavBar = () => {
             </NavLink>
         </li>
         <li>
-            <NavLink to="/signup" className={({ isActive, isPending }) =>
+            <NavLink to="/petLesting" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "text-[#FF4880]" : ""}>
                     Pet Lesting
             </NavLink>
@@ -20,10 +28,18 @@ const NavBar = () => {
             </NavLink>
         </li>
         <li>
-            <NavLink to="/login" className={({ isActive, isPending }) =>
+            {/* <NavLink to="/login" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "text-[#FF4880]" : ""}>
                     Login
-            </NavLink>
+            </NavLink> */}
+
+{
+                            user ?
+                                <button onClick={handleLogOut} className="btn ml-4">Log out</button>
+                                :
+                                <Link to="/login">
+                                    <button className="btn">Login</button></Link>
+                        }
         </li>
     </>
     return (

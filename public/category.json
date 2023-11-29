@@ -1,0 +1,163 @@
+[
+    {
+      "category": "cat",
+      "image": "https://i.ibb.co/jyHYVcr/istockphoto-1067347086-612x612.jpg",
+      "name": "Whiskers",
+      "location": "Living Room",
+      "shortDescription": "Adorable tabby cat",
+      "longDescription": "Whiskers is a playful and friendly tabby cat with distinctive markings. Enjoys chasing toys and cuddling on the couch.",
+      "date": "2023-01-15",
+      "age": 3
+    },
+    {
+      "category": "cat",
+      "image": "https://i.ibb.co/prP2x0h/1532.jpg",
+      "name": "Mittens",
+      "location": "Bedroom",
+      "shortDescription": "Fluffy white cat",
+      "longDescription": "Mittens is a fluffy white cat with bright blue eyes. Enjoys sunbathing by the window and playing with feather toys.",
+      "date": "2023-02-05",
+      "age": 2
+    },
+    {
+      "category": "cat",
+      "image": "https://i.ibb.co/G7Q6bBc/090814-Oreo-Newspaper-239.jpg",
+      "name": "Oreo",
+      "location": "Kitchen",
+      "shortDescription": "Black and white beauty",
+      "longDescription": "Oreo is a charming black and white cat with a sleek coat. Loves exploring the kitchen and watching birds from the windowsill.",
+      "date": "2023-03-20",
+      "age": 4
+    },
+    {
+      "category": "cat",
+      "image": "https://i.ibb.co/xj4sZFQ/international-black-cat-awareness-month-e1575287719521.jpg",
+      "name": "Shadow",
+      "location": "Outdoor Garden",
+      "shortDescription": "Adventurous black cat",
+      "longDescription": "Shadow is an adventurous black cat who enjoys exploring the outdoor garden. Skilled at climbing trees and chasing butterflies.",
+      "date": "2023-04-10",
+      "age": 5
+    },
+    {
+        "category": "dog",
+        "image": "https://i.ibb.co/2PPG9gy/my-companion-my-buddy-my-best-friend-i-gorgeous-english-bull-dog-life-93147247.jpg",
+        "name": "Buddy",
+        "location": "Backyard",
+        "shortDescription": "Friendly golden retriever",
+        "longDescription": "Buddy is a friendly golden retriever with a wagging tail. Enjoys playing fetch and going for long walks.",
+        "date": "2023-05-22",
+        "age": 2
+      },
+      {
+        "category": "dog",
+        "image": "https://i.ibb.co/mDCKnHW/IMG-8129.jpg",
+        "name": "Max",
+        "location": "Park",
+        "shortDescription": "Energetic border collie",
+        "longDescription": "Max is an energetic border collie with a love for agility training. Enjoys chasing frisbees and learning new tricks.",
+        "date": "2023-06-17",
+        "age": 3
+      },
+      {
+        "category": "dog",
+        "image": "https://i.ibb.co/QPhQqWm/Biobuddy-dog.png",
+        "name": "Luna",
+        "location": "Beach",
+        "shortDescription": "Playful Labrador retriever",
+        "longDescription": "Luna is a playful Labrador retriever who loves splashing in the waves. Enjoys long walks along the shoreline.",
+        "date": "2023-07-08",
+        "age": 1
+      },
+      {
+        "category": "dog",
+        "image": "https://i.ibb.co/R7n6dHw/download-6.jpg",
+        "name": "Rocky",
+        "location": "Hiking Trail",
+        "shortDescription": "Adventurous German Shepherd",
+        "longDescription": "Rocky is an adventurous German Shepherd who enjoys hiking in the mountains. Loyal and protective, he's a great companion on outdoor adventures.",
+        "date": "2023-08-30",
+        "age": 4
+      },
+      {
+        "category": "horse",
+        "image": "https://i.ibb.co/yNz1v4X/images-2.jpg",
+        "name": "Spirit",
+        "location": "Ranch",
+        "shortDescription": "Elegant Arabian horse",
+        "longDescription": "Spirit is an elegant Arabian horse known for its graceful movements. Enjoys galloping in the open fields of the ranch.",
+        "date": "2023-09-15",
+        "age": 5
+      },
+      {
+        "category": "horse",
+        "image": "https://i.ibb.co/PQ1bv0h/images-1.jpg",
+        "name": "Thunder",
+        "location": "Meadow",
+        "shortDescription": "Strong Clydesdale horse",
+        "longDescription": "Thunder is a strong Clydesdale horse with a gentle disposition. Often seen pulling carts and participating in parades.",
+        "date": "2023-10-08",
+        "age": 6
+      },
+      {
+        "category": "horse",
+        "image": "https://i.ibb.co/sHytsw4/preparingpropertyhorse.jpg",
+        "name": "Bella",
+        "location": "Trail",
+        "shortDescription": "Graceful Thoroughbred",
+        "longDescription": "Bella is a graceful Thoroughbred horse with a love for trail riding. Known for her speed and endurance on long journeys.",
+        "date": "2023-11-20",
+        "age": 4
+      },
+      {
+        "category": "horse",
+        "image": "https://i.ibb.co/9NwYcZQ/download-7.jpg",
+        "name": "Midnight",
+        "location": "Pasture",
+        "shortDescription": "Beautiful Friesian horse",
+        "longDescription": "Midnight is a beautiful Friesian horse with a striking black coat and a flowing mane. Enjoys grazing in the lush pasture.",
+        "date": "2023-12-12",
+        "age": 7
+      },
+      {
+        "category": "rabbit",
+        "image": "https://i.ibb.co/zFvmtrM/images-3.jpg",
+        "name": "Thumper",
+        "location": "Indoor Hutch",
+        "shortDescription": "Cute Holland Lop",
+        "longDescription": "Thumper is a cute Holland Lop rabbit with floppy ears and a gentle nature. Enjoys hopping around the indoor hutch.",
+        "date": "2024-01-05",
+        "age": 1
+      },
+      {
+        "category": "rabbit",
+        "image": "https://i.ibb.co/9cfK578/download-8.jpg",
+        "name": "Cotton",
+        "location": "Garden",
+        "shortDescription": "Fluffy Angora Rabbit",
+        "longDescription": "Cotton is a fluffy Angora rabbit known for its soft fur. Enjoys nibbling on fresh greens in the garden.",
+        "date": "2024-02-18",
+        "age": 2
+      },
+      {
+        "category": "rabbit",
+        "image": "https://i.ibb.co/TKgkTrX/New-World-Sylvilagus-cottontail-rabbits.jpg",
+        "name": "Binky",
+        "location": "Playroom",
+        "shortDescription": "Playful Dwarf Rabbit",
+        "longDescription": "Binky is a playful Dwarf rabbit with a curious personality. Enjoys hopping and exploring in the playroom.",
+        "date": "2024-03-10",
+        "age": 1
+      },
+      {
+        "category": "rabbit",
+        "image": "https://i.ibb.co/wwwFfYV/rabbit-on-the-farm-and-sunshine-free-photo.jpg",
+        "name": "Hazel",
+        "location": "Backyard",
+        "shortDescription": "Spotted Rex Rabbit",
+        "longDescription": "Hazel is a spotted Rex rabbit with a sleek coat. Enjoys lounging in the backyard and digging in the grass.",
+        "date": "2024-04-22",
+        "age": 3
+      }
+  ]
+  
