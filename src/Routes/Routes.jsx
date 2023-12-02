@@ -5,6 +5,9 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import CategoryItem from "../Pages/Home/Categories/CategoryItem";
 import PetLesting from "../Pages/PetLesting/PetLesting";
+import DonationCampaigns from "../Pages/DonationCampaigns/DonationCampaigns";
+import PetDetails from "../Pages/Home/PetDetails/PetDetails";
+import DonationDetails from "../Pages/DonationCampaigns/DonationDetails";
 
 const router = createBrowserRouter([
     {
@@ -31,7 +34,21 @@ const router = createBrowserRouter([
         {
           path: "/petLesting",
           element: <PetLesting></PetLesting>,
-          loader: () => fetch('/category.json')
+          // loader: () => fetch('/category.json')
+        },
+        {
+          path: "/pet/:id",
+          element: <PetDetails></PetDetails>
+        },
+        {
+          path: "/donationcampaign",
+          element: <DonationCampaigns></DonationCampaigns>
+          // loader: () => fetch('/category.json')
+        },
+        {
+          path: "/donationcampaign/:id",
+          element: <DonationDetails></DonationDetails>
+          // loader: () => fetch('/category.json')
         },
       ]
     },
