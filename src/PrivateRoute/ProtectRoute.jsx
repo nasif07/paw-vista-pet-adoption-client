@@ -7,7 +7,7 @@ const ProtectRoute = ({children}) => {
 
     const { user, loading } = useContext(AuthContext);
 
-    if(user){
+    if(loading){
         return <Loading></Loading>
     }
     if(user){
