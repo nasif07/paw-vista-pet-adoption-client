@@ -12,6 +12,11 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import UserHome from "../Pages/UserHome/UserHome";
 import AddAPet from "../Pages/AddaPet/AddAPet";
 import ProtectRoute from "../PrivateRoute/ProtectRoute";
+import MyAddedPets from "../Pages/MyAddedPets/MyAddedPets";
+import UpdatePet from "../Pages/MyAddedPets/UpdatePet";
+import AdminRoute from "../PrivateRoute/AdminRoute";
+import AllUsers from "../Pages/AdminPage/AllUsers/AllUsers";
+import AdminAllPets from "../Pages/AdminPage/AdminAllPets/AdminAllPets";
 
 const router = createBrowserRouter([
     {
@@ -67,6 +72,22 @@ const router = createBrowserRouter([
         {
           path: "/dashboard/addapet",
           element: <ProtectRoute><AddAPet></AddAPet></ProtectRoute>
+        },
+        {
+          path: "/dashboard/myAddedPets",
+          element: <ProtectRoute><MyAddedPets></MyAddedPets></ProtectRoute>
+        },
+        {
+          path: "/dashboard/updatepet/:id",
+          element: <ProtectRoute><UpdatePet></UpdatePet></ProtectRoute>
+        },
+        {
+          path: "/dashboard/allusers",
+          element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+        },
+        {
+          path: "/dashboard/adminAllPets",
+          element: <AdminRoute><AdminAllPets></AdminAllPets></AdminRoute>
         }
       ]
     }

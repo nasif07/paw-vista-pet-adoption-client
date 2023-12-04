@@ -1,14 +1,16 @@
 import Lottie from "lottie-react";
 import reg from "../../assets/reg.json"
 import Container from "../../Components/Container";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { FaFacebook, FaGoogle } from "react-icons/fa6";
 import toast from "react-hot-toast";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import useAxiosPublic from "../../Hook/useAxiosPublic";
 
 const Register = () => {
-    const {googleSignIn, emailPasswordSignIn, handleUpdateProfile} = useContext(AuthContext);
+    const { googleSignIn, emailPasswordSignIn, handleUpdateProfile } = useContext(AuthContext);
+    const axiosPublic = useAxiosPublic();
 
 
     const handleRegister = (event) => {
@@ -19,39 +21,59 @@ const Register = () => {
         const password = event.target.password.value;
         // console.log(email, password, name, photo);
 
-        if (password.length < 6 ) {
+        if (password.length < 6) {
             toast.error('password must be at least 6 characters')
             return;
         }
-        if(!/^(?=.*[A-Z])(?=.*[@#$%^&+=!]).*$/.test(password)){
+        if (!/^(?=.*[A-Z])(?=.*[@#$%^&+=!]).*$/.test(password)) {
             toast.error('password must be have at least one capital letter and one special character')
             return;
         }
         emailPasswordSignIn(email, password)
-        .then(res => {
-            console.log(res);
-            handleUpdateProfile(name, photo)
-            .then(() => {
-                toast.success('Register Successfull')
+            .then(res => {
+                console.log(res);
+                handleUpdateProfile(name, photo)
+                    .then(() => {
+                        const userInfo = {
+                            name: name,
+                            email: email,
+                            photoURL: photo
+                        }
+                        toast.success('Register Successfull')
+                        axiosPublic.post('/users', userInfo)
+                            .then(res => {
+                                
+                                 Navigate('/')
+                            })
+                            .catch(error => {
+                                toast.error(error.message)
+                            })
+                    })
             })
-        })
-        .catch(error => {
-            toast.error(error.message)
-        })
 
 
     }
 
-    const handleGoogleSignIn= () => {
+    const handleGoogleSignIn = () => {
         googleSignIn()
-        .then(res => {
-            console.log(res);
-            toast.success('Register Successfull')
-        })
-        .catch(error => {
-            console.log(error)
-            toast.error(error.message);
-        })
+            .then(res => {
+                console.log(res);
+                const userInfo = {
+                    email: res.user?.email,
+                    name: res.user?.displayName,
+                    photoURL: res.user?.photoURL
+                }
+                axiosPublic.post('/users', userInfo)
+                    .then(res => {
+                        console.log(res.data);
+                        Navigate('/')
+                    })
+                toast.success('Register Successfull')
+            })
+            .catch(error => {
+                console.log(error)
+                toast.error(error.message);
+            })
     }
 
 
@@ -93,7 +115,7 @@ const Register = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn text-white bg-[#FF4880]">Login</button>
+                                <button className="btn text-white bg-[#FF4880]">Register</button>
                             </div>
                             <div className="divider my-6">Login with Social</div>
                             <div className="flex justify-center gap-7">

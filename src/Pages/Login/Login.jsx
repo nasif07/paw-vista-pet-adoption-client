@@ -2,14 +2,16 @@
 import Lottie from "lottie-react";
 import animation from "../../assets/register.json"
 import Container from "../../Components/Container";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { FaFacebook, FaGoogle } from "react-icons/fa6";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
+import useAxiosPublic from "../../Hook/useAxiosPublic";
 
 const Login = () => {
     const { googleSignIn, emailPasswordLogIn } = useContext(AuthContext);
+    const axiosPublic = useAxiosPublic();
 
 
     const handleLogin = (event) => {
@@ -29,10 +31,20 @@ const Login = () => {
     }
 
     const handleGoogleSignUp = () => {
-        console.log('janina');
+        // console.log('janina');
         googleSignIn()
             .then(res => {
                 console.log(res)
+                const userInfo = {
+                    email: res.user?.email,
+                    name: res.user?.displayName,
+                    photoURL: res.user?.photoURL
+                }
+                axiosPublic.post('/users', userInfo)
+                    .then(res => {
+                        console.log(res.data);
+                        Navigate('/')
+                    })
                 toast.success('Login Successfull')
             })
             .catch(err => {

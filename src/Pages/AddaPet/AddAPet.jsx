@@ -4,10 +4,13 @@ import useAxiosPublic from "../../Hook/useAxiosPublic";
 import moment from "moment";
 import useAxiosSecure from "../../Hook/useAxiosSecure";
 import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const AddAPet = () => {
     const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure()
+    const {user} = useContext(AuthContext)
 
 
 
@@ -24,10 +27,13 @@ const AddAPet = () => {
                 // console.log(values.image);
 
                 const formData = new FormData();
+                console.log(values.image);
                 formData.append("image", values.image);
 
+                console.log(formData);
+
                 const { data } = await axiosPublic.post(
-                    `https://api.imgbb.com/1/upload?key=483285208c5b958666394dc1db4dca3c`, formData,
+                    `https://api.imgbb.com/1/upload?key=9a9f91fb1f78422468bc7f69ef786328`,formData,
                     {
                         headers: {
                             "Content-Type": "multipart/form-data",
@@ -47,7 +53,9 @@ const AddAPet = () => {
                     shortDescription,
                     longDescription,
                     date: moment().subtract(10, 'days').calendar(),
-                    age: petAge
+                    age: petAge,
+                    email: user.email,
+                    status: 'false'
                 }
                 console.log(postData);
                 const res = await axiosSecure.post('/allpets', postData);
