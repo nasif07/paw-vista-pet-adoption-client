@@ -1,4 +1,4 @@
-import { FaEnvelope, FaHorse, FaUser } from "react-icons/fa6";
+import { FaDollarSign, FaEnvelope, FaHorse, FaUser } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
 import NavBar from "../../Shared/NavBar";
 import { IoIosAddCircleOutline } from "react-icons/io";
@@ -27,6 +27,9 @@ const Dashboard = () => {
                         </li>
                         <li>
                             <NavLink to={"/dashboard/createDonation"}><FaDonate></FaDonate>Create Donation</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={"/dashboard/myDonations"}><FaDollarSign></FaDollarSign>My Donations</NavLink>
                         </li>
                         
 

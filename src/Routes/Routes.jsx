@@ -18,6 +18,7 @@ import AdminRoute from "../PrivateRoute/AdminRoute";
 import AllUsers from "../Pages/AdminPage/AllUsers/AllUsers";
 import AdminAllPets from "../Pages/AdminPage/AdminAllPets/AdminAllPets";
 import CreateDonation from "../Pages/CreateDonation/CreateDonation";
+import MyDonations from "../Pages/MyDonations/MyDonations";
 
 const router = createBrowserRouter([
     {
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
         {
           path: "/dashboard/createDonation",
           element: <ProtectRoute><CreateDonation></CreateDonation></ProtectRoute>
+        },
+        {
+          path: "/dashboard/myDonations",
+          element: <ProtectRoute><MyDonations></MyDonations></ProtectRoute>
         },
         {
           path: "/dashboard/allusers",

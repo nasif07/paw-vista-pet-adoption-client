@@ -107,7 +107,7 @@ const DonationDetails = () => {
                             </Typography>
                             <div className="grid gap-6">
                                 <Elements stripe={stripePromise}>
-                                    <CheckOutForm></CheckOutForm>
+                                    <CheckOutForm picture={picture} petName={petName}></CheckOutForm>
                                 </Elements>
                             </div>
                         </DialogBody>

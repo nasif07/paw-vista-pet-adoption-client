@@ -4,7 +4,7 @@ import useAxiosSecure from "../../Hook/useAxiosSecure";
 import { AuthContext } from "../../providers/AuthProvider";
 import moment from "moment/moment";
 
-const CheckOutForm = () => {
+const CheckOutForm = ({picture, petName}) => {
     const [error, setError] = useState('');
     const [donationAmount, setDonationAmount] = useState();
     const [clientSecret, setClientSecret] = useState('')
@@ -75,6 +75,8 @@ const CheckOutForm = () => {
                 setTransactionId(paymentIntent.id)
                 const payment = {
                     email: user.email,
+                    picture,
+                    petName,
                     donationAmount: donationAmount,
                     transactionId: paymentIntent.id,
                     date:  moment().subtract(10, 'days').calendar(), // utc data convert. use moment js to
