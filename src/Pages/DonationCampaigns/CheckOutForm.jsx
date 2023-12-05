@@ -92,7 +92,7 @@ const CheckOutForm = () => {
             <form onSubmit={handleamountSubmit}>
                 <label className="form-control w-full">
                     <div className="label">
-                        <span className="label-text">User Name</span>
+                        <span className="label-text">Amount</span>
                     </div>
                     <input name="amount" type="number" placeholder="Type here" className="input input-bordered w-full" />
                 </label>

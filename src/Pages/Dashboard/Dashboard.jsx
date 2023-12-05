@@ -3,6 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import NavBar from "../../Shared/NavBar";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import useAdmin from "../../Hook/useAdmin";
+import { FaDonate } from "react-icons/fa";
 // import useAdmin from "../../Hook/useAdmin";
 
 
@@ -25,7 +26,7 @@ const Dashboard = () => {
                             <NavLink to={"/dashboard/myAddedPets"}><FaHorse></FaHorse>My Added Pets</NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/order/salad"}><FaEnvelope></FaEnvelope>Contact</NavLink>
+                            <NavLink to={"/dashboard/createDonation"}><FaDonate></FaDonate>Create Donation</NavLink>
                         </li>
                         
 
