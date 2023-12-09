@@ -24,12 +24,12 @@ const MyDonations = () => {
     const handleDeleteItem = (item) => {
         Swal.fire({
             title: "Are you sure?",
-            text: "You won't be able to revert this!",
+            text: "You won't be able to refund this!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: "Yes, Refund it!"
         }).then(async (result) => {
             if (result.isConfirmed) {
                 const res = await axiosSecure.delete(`/userDonation/${item._id}`);
@@ -37,7 +37,7 @@ const MyDonations = () => {
                 if (res.data.deletedCount > 0) {
                     refetch();
                     Swal.fire({
-                        title: "Deleted!",
+                        title: "Refunded!",
                         text: "Your Refund request accepted.",
                         icon: "success"
                     });
@@ -83,7 +83,7 @@ const MyDonations = () => {
                                 <td>
                                     {item.petName}
                                 </td>
-                                <td>{item.amount}$</td>
+                                <td>{item.donationAmount}$</td>
                                 <td>
                                     <button
                                         onClick={() => handleDeleteItem(item)} className="btn btn-ghost btn-lg">
